@@ -7,6 +7,12 @@
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  height:100%;
+  overflow:hidden;
+}
+
 body {
   margin: 0;
   font-family: Arial;
@@ -15,14 +21,12 @@ body {
 
 #myVideo {
   position: fixed;
-  /* left: 0; */
-  bottom: 0;
-  /* width: 100%; */
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   min-width: 100%;
-  /* min-height: 100%; */
-  /* max-width: 300%; */
-  /* max-height: 150%; */
+  min-height: 100%;
+  max-height: 112%;
 }
 
 .content {
@@ -52,7 +56,7 @@ body {
 </head>
 <body>
 
-<video autoplay muted loop id="myVideo">
+<video autoplay muted id="myVideo">
   <source src="moveVesselTrim.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
@@ -60,10 +64,10 @@ body {
 <div class="content">
   <h1>Heading</h1>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <button id="myBtn" onclick="myFunction()">Pause</button>
+  <!-- <button id="myBtn" onclick="myFunction()">Pause</button> -->
 </div>
 
-<script>
+<!-- <script>
 var video = document.getElementById("myVideo");
 var btn = document.getElementById("myBtn");
 
@@ -76,7 +80,7 @@ function myFunction() {
     btn.innerHTML = "Play";
   }
 }
-</script>
+</script> -->
 
 </body>
 </html>
